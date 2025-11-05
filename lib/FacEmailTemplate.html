@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<table style="font-family:Arial, Helvetica, sans-serif"
+        width=700 border=1 bordercolor=black
+        cellpadding=15 cellspacing=0 bgcolor=blue>
+
+    <tr>
+        <td>
+            <img alt="DWR Logo"
+                    style="border-radius:50%;max-height:70px;max-width:70px;display:inline-block"
+                    src="cid:dwr_logo">
+        </td>
+
+        <td>
+            <h1>USBR/DWR Joint-Use Post-EQ Alert</h1>
+        </td>
+    </tr>
+</table>
+
+<body>
+    <font size=3 face="Arial">
+        <h2>Preliminary Earthquake Notification</h2>
+    </font>
+    <p>O&M's automated earthquake alert system has detected an earthquake near 
+        the USBR/DWR joint-use dams in San Luis Field Division. Please perform 
+        post-earthquake inspections on the dams listed in the table below. This
+        is an automated message and has not been reviewed by O&M's Earthquake 
+        Engineering Specialist. Event magnitudes and locations may be updated
+        and change the required inspections. Please click on teh USGS Event ID 
+        link below for the most up-to-date earthquake information.</p>
+    <p>USGS Event ID:
+    <a target="_blank"
+                href="https://earthquake.usgs.gov/earthquakes/eventpage/{{ evid }}">
+                {{ evid }}
+            </a></p>
+    <p>Event time (UTC): {{ evtime }}</p>
+    <p>Event Magnitude: {{ evmag }}</p>
+    <p>Event Location: {{ latitude }}, {{ longitude }}</p>
+    <p>{{ table }}</p>
+
+    <footer>
+        This email was sent from <i>SeisComP Development Server</i>.
+    </footer>
+</body>
+
+</html>
